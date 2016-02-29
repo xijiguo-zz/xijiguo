@@ -1,18 +1,19 @@
 /* body, html */
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+/*    font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Bitter', serif;
 	margin: 0;
 	padding: 0;
 }
 
 
 /* wrapper */
-#wrapper {
+/*#wrapper {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
 	background-color: white;
-}
+}*/
 
 
 /* header */
@@ -23,56 +24,239 @@ body {
 	height: 50px;
 	width: 100%;
 	text-align: center;
+	font-size: 18px;
+	letter-spacing: 2px;
 	background-color: #002846;
+	z-index: 3;
 }
 
 #header-list {
 	width: 100%;
+	margin-top: 10px;
 	padding: inherit;
 	display: inline-block;
 }
 
 #header-list li {
-	padding-left: 8px;
-	padding-right: 8px;
+	padding: 5px;
+	margin-left: 10px;
 	display: inline-block;
 }
 
 #header-list a {
-	color: #8C999F;
+	color: #ffffff;
+	text-decoration: none;
 }
 
-/* content */
-#content {
-	height: 100%;
+/* main */
+#main {
+	position: relative;
 	margin-top: 50px;
-	background-color: #48789A;
+	width: 100%;
+	letter-spacing: 2px;
+	text-align: center;
+	background-color:#002846;
+	background-image: url("/space.svg");
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	margin-top: -215px;
+	margin-left: -300px;
+    font-family: 'Bitter', serif;
+    font-weight: normal;
+   	font-size: 3em;
+	color: #ffffff;
+}
+
+h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	margin-top: -125px;
+	margin-left: -300px;
+    font-family: 'Bitter', serif;
+    font-weight: normal;
+   	font-size: 2em;
+	color: #ffffff;
+}
+
+.init #main #astronaut{
+	-webkit-transform: translate3d(0, -1000px, 0) rotate(-60deg);
+	-ms-transform: translate3d(0, -1000px, 0) rotate(-60deg);
+	transform: translate3d(0, -1000px, 0) rotate(-60deg);
+}
+
+
+#main #astronaut {
+	position: absolute;
+	bottom: 60px;
+	right: 38%;
+	z-index: 1;
+	max-height: 400px;
+	max-width: 400px;
+	-webkit-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	transform: rotate(10deg);
+	-webkit-transition: -webkit-transform 1.5s ease-out;
+	transition: transform 1.5s ease-out;
+}
+
+#moon-container {
+	position: absolute;
+	bottom: 0;
+    left: 50%;
+    margin-left: -345px;
+	width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+#moon {
+	display: block;
+}
+
+#down-arrow {
+    position: absolute;
+    bottom: 100px;
+    width: 70px;
+    left: 50%;
+    z-index: 2;
+	margin-left: -22px;
+    -webkit-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite; 
+}
+
+@keyframes blink{
+	0% { 
+		opacity: 0;
+		bottom: 100px;
+		filter: alpha(opacity=0);
+	}
+	50% {
+		opacity: 1;
+		bottom: 80px;
+		filter: alpha(opacity=100);
+	}
+	100% {
+		opacity: 0;
+		bottom: 60px;
+		filter: alpha(opacity=0);
+	}
+}
+
+@-webkit-keyframes blink{
+	0% { 
+		opacity: 0;
+		bottom: 100px;
+		filter: alpha(opacity=0);
+	}
+	50% {
+		opacity: 1;
+		bottom: 80px;
+		filter: alpha(opacity=100);
+	}
+	100% {
+		opacity: 0;
+		bottom: 60px;
+		filter: alpha(opacity=0);
+	}
 }
 
 /* about */
 #about {
-	position: absolute;
-	top: 25%;
-	left: 50%;
-	margin-left: -257px;
-	width: 500px;
-	text-align: center;
-	background-color: #002846;
+	background-color: #E0DCD4;
+	height: 1500px;
 }
 
-#about h1 {
-	color: #DA224B;
-}
 
-#about h2 {
-	color: #BD9456;
-}
-
+/* footer */
 #footer {
 	height: 50px;
 	text-align: center;
-	color: #8C999F;
+	color: #ffffff;
 	background-color: #002846;
 	padding-top: 15px;
 	box-sizing: border-box;
+}
+
+
+/* Responsive design */
+@media only screen and (max-width: 1000px) {
+	
+	#moon-container {
+	    position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    margin-left: -300px;
+	    width: 100%;
+	    max-width: 600px;
+	    overflow: hidden;
+	}
+
+	#astronaut {
+		position: absolute;
+		bottom: 60px;
+		right: 28%;
+		z-index: 101;
+		max-height: 350px !important;
+		max-width: 350px !important;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+
+	#astronaut {
+		position: absolute;
+		bottom: 60px;
+		right: 20% !important;
+		z-index: 101;
+		max-height: 350px !important;
+		max-width: 350px !important;
+	}
+}
+
+@media only screen and (max-width: 630px) {
+
+	#moon-container {
+	    position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    margin-left: -250px;
+	    width: 100%;
+	    max-width: 500px;
+	    overflow: hidden;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	h1 {
+		width: 500px;
+		margin-top: -215px;
+		margin-left: -250px;
+		font-size: 2.5em;
+	}
+
+	h2 {
+		width: 500px;
+		margin-top: -125px;
+		margin-left: -250px;
+		font-size: 1.5em;
+	}
+
+	#astronaut, #moon {
+		display: none;
+	}
+
+	#down-arrow {
+	    width: 50px;
+		margin-left: -22px;
+	}
+}
+
+@media only screen and (max-width: 470px) {
 }

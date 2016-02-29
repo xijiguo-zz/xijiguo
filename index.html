@@ -4,19 +4,46 @@
 <!-- <![if gte IE 10]> -->
 <html><!-- <![endif]-->
 	<head>
+		<title>Xi Ji Guo</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Xi Ji Guo</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		<script>
-			particlesJS.load('particles-js', 'particles.json', function() {
-			  console.log('callback - particles.js config loaded');
-			});
-		</script>
 
+		<!-- CSS -->
+		<link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900|Bitter:400,700" rel="stylesheet" type="text/css">
+
+		<!-- Javascripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type='text/javascript' src='myscript.js'></script>
+	</head>
+	<body>
+		<div id="header">
+			<ul id="header-list">
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#portfolio">PORTFOLIO</a></li>
+				<li><a href="#code">CODE</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</div>
+		<div id="main">
+			<h1>XI JI GUO</h1>
+			<h2>I'M A <span style="color:#94CE92">SOFTWARE ENGINEER</span> &
+				<br> 
+				A <spam style="color:#FDBB63">PRODUCT DESIGNER</span>
+			</h2>
+			<img id="astronaut" src="astronaut.svg" alt="astronaut">
+			<div id="moon-container">
+				<img id="moon" src="moon.svg" alt="moon">
+			</div>
+			<img id="down-arrow" src="down-arrow.svg" alt="down navigation arrow"> 
+		</div>
+		<div id="about"></div>
+		<div id="portfolio"></div>
+		<div id="code"></div>
+		<div id="contact"></div>
+		<div id="footer">Copyright © Xi Ji Guo 2015</div>
+		<!-- Loading Javascript Libraries & files -->
 		<!-- Google Analytics -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,30 +53,7 @@
 
 		  ga('create', 'UA-58265920-1', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
 		<!-- End Google Analytics -->
-	</head>
-	<body>
-		<div id="wrapper">
-			<div id="header">
-				<ul id="header-list">
-					<li><a href="#about">About</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#code">Code</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</div>
-			<div id="content">
-				<div id="about">
-					<h1>Xi Ji Guo</h1>
-					<h2>Software engineer & lifelong learner</h2>
-				</div>
-				<div id="particles-js"></div>
-			</div>
-			<div id="footer">Copyright © Xi Ji Guo 2015</div>
-		</div>
-		<!-- Loading Javascript Libraries & files -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	</body>
 </html>
