@@ -41,9 +41,11 @@
 
 		var about = document.querySelector("#about");
 		var aboutPos = about.offsetTop - HEADEROFFSET;
+		about.children[0].classList.remove("bounce");
 
 		main.addEventListener("click", function(event) {
 			smoothScroll(window.scrollY, aboutPos);
+			about.children[0].classList.add("bounce");
 		})
 	}
 
@@ -59,12 +61,14 @@
 						goToItem = document.querySelector("#about");
 						goToItemPos = goToItem.offsetTop - HEADEROFFSET;
 						smoothScroll(window.scrollY, goToItemPos);
+						console.log(goToItem.children[0].classList.add("bounce"));
 					});
 					break;
-				case "PORTFOLIO":
+				case "WHATICANDO":
 					item.addEventListener("click", function(){
-						goToItem = document.querySelector("#portfolio");
+						goToItem = document.querySelector("#whaticando");
 						goToItemPos = goToItem.offsetTop - HEADEROFFSET;
+						console.log(goToItemPos);
 						smoothScroll(window.scrollY, goToItemPos);
 					});
 					break;
@@ -75,7 +79,7 @@
 						smoothScroll(window.scrollY, goToItemPos);
 					});
 					break;
-				case "CONTRACT":
+				case "CONTACT":
 					item.addEventListener("click", function(){
 						goToItem = document.querySelector("#contact");
 						goToItemPos = goToItem.offsetTop - HEADEROFFSET;
