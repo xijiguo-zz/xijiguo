@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Slack Demo</title>
+  <meta name="Xi Ji Guo" content="Demo">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/lightbox.css">
+  <script type="text/javascript" src="js/myscript.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Title -->
+    <h1>Slack LightBox Demo</h1>
+    <!-- Search -->
+    <div id="search">
+      <form action="javascript:void(0);" method="GET">
+        <fieldset class="clearfix">
+          <input type="search" name="search" value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'" onFocus="if(this.value=='What are you looking for?')this.value='' "> <!-- JS because of IE support; better: placeholder="What are you looking for?" -->
+          <input type="submit" value="Search" class="button">
+        </fieldset>
+      </form>
+    </div> 
+    <!-- Images -->
+    <ul id="portfolio" class="clearfix">
+    </ul>
+  </div>
+<script type="text/javascript">
+</script>
+</body>
+</html>
